@@ -7,10 +7,22 @@ class Code_word < Minitest::Test
 	end
 
 	def test_class_array
-		assert_equal(Hash, code_word.class)
+		code = code_word(1942)
+		assert_equal(String, code.class)
 	end
 
-	def test_hash_key
-		assert_equal(true, code_word.has_key?("a"))
+	def test_404_error
+		code = code_word(404)
+		assert_equal("Page wasn't found.", code)
 	end
+
+	# def test_hash_key
+	# 	assert_equal(true, code_word.has_key?("a"))
+	# end
+
+	# def test_hash_key
+	# 	assert_equal(false, code_word.has_key?("z"))
+	# end
+
+
 end
