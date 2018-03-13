@@ -16,13 +16,14 @@ class Code_word < Minitest::Test
 		assert_equal("Page wasn't found.", code)
 	end
 
-	# def test_hash_key
-	# 	assert_equal(true, code_word.has_key?("a"))
-	# end
+	def test_1942_error
+		code = code_word(1942)
+		assert_equal("grandpa was found", code)
+	end
 
-	# def test_hash_key
-	# 	assert_equal(false, code_word.has_key?("z"))
-	# end
-
+	def test_402_error
+		code = code_word(402)
+		assert_equal("Page almost found", code)
+	end
 
 end
