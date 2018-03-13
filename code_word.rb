@@ -1,3 +1,3 @@
-def code_word
-	code = { "a" => 1 }
+def code_word(error)
+	"Page wasn't found."
 end
