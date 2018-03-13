@@ -9,4 +9,8 @@ class Code_word < Minitest::Test
 	def test_class_array
 		assert_equal(Hash, code_word.class)
 	end
+
+	def test_hash_key
+		assert_equal(true, code_word.has_key?("a"))
+	end
 end
